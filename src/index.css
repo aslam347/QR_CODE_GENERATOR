@@ -1,13 +1,110 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f2f2f2; /* Changed to a lighter background color */
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 0; /* Adjusted padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-container h1 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #3498db;
+  margin-bottom: 20px; /* Added some spacing */
+}
+
+.qr-container {
+  display: flex;
+  justify-content: center;
+}
+
+.qr-code-image {
+  padding: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #3498db;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  padding: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-button {
+  background-color: #3498db;
+}
+
+.generate-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.download-button {
+  background-color: #27ae60;
+  margin-left: 10px;
+}
+
+.download-button:hover {
+  background-color: #219a52;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .app-container {
+    padding: 20px; /* Increased padding for smaller screens */
+  }
+  .app-container h1 {
+    font-size: 16px;
+  }
+  input[type="text"] {
+    font-size: 14px;
+  }
+  button {
+    font-size: 16px;
+  }
 }
